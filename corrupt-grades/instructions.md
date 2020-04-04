@@ -1,6 +1,6 @@
 # Corrupt Teacher Grade Average
 ## Requirements
-Create `corrupt_average(grades, paid)`, which will be used by a corrupt teacher to calculate the grades of a student based on whether they paid him or not. If a student has paid the teacher, said teacher will help the student by adding another grade of '10' to inflate the overall average. If the student hasn't paid, the teacher will add another grade of '5' to bring down the final average of the student. This is one evil teacher  :smiling_imp: !!
+Create `corrupt_average(grades, paid)`, which will be used by a corrupt teacher to calculate the grades of a student based on whether they paid the teacher or not. If a student has paid the teacher, said teacher will help the student by adding another grade of `10` to inflate the overall average. If the student hasn't paid, the teacher will add another grade of `5` to bring down the final average of the student. This is one evil teacher  :smiling_imp: !!
 ### Parameters
 * `grades`: is a list of a student's grades (**integers**)
 * `paid`: is a **boolean** variable that tells you if the student paid the teacher to get help with his/her grades.
