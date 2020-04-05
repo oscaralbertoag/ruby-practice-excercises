@@ -1,2 +1,2 @@
 # Ruby Practice Exercises
-This repository contains problems and solutions I created to practice Ruby concepts.
+This repository contains problems and solutions to help my sister while she is learning to program in Ruby. I'm learning with her, so the solutions may not be production quality, but they work!
