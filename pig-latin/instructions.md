@@ -1,6 +1,6 @@
 # Spanish Pig Latin
 ## Requirements
-Create `spanish_pig_latin(sentence)` that inserts an `f` + vowel for every vowel it finds in a word or sentence.
+Create `spanish_pig_latin(sentence)` that inserts an `f` + vowel for every vowel it finds in a word or sentence. It _must_ work for upper case and lower case characters.
 ### Parameters
 * `sentence`: a **string** to convert into Spanish pig latin
 ### Return Value
