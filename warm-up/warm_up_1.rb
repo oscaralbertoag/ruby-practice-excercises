@@ -1,79 +1,155 @@
 # WARM UP EXERCISE WORKSHEET 1
-# Solve all problems. Sometimes a particular problem may have more than 1 correct answer. 
+# Solve all problems. Sometimes a particular problem may have more than 1 correct answer.
 # Problems can also build on previous problems.
 
 # 1) Create an array (store it in a new variable) and push these numbers to the array: 2,4,6,8,10
-
+nathan = ['hugo_tsr', 'justice', 'doozkawa', 'davodka', 'stupeflip']
+nathan.push('2', '4', '6', '8', '10')
+puts nathan
 # 2) Access the 5th element in the array created in step 1 and store it in a new variable
+new_nathan = nathan[4]
 
 # 3) Replace the 4th element in the array created in step 1 with the number 27
+nathan[3] = '27'
 
 # 4) Store the array's size in a new variable
+new_var = nathan.size
 
-# 5) Create a new empty array of size 15 
+# 5) Create a new empty array of size 15
+Array.new(15)
 
 # 6) Create a new array of size 10 filled with zeroes (by using a single command)
+nathan_2 = Array.new 10, '0'
 
 # 7) Create a string with your first name and store it in a variable
+nombre = 'Erika'
 
 # 8) Create a string with your last name and store it in a variable
+apellido = 'Alvarez'
 
 # 9) Concatenate the strings from steps 7 & 8 and store the result in a new variable. Don't forget to add a space between first and last name. Do not use string interpolation.
+puts nombre + ' ' + apellido
 
 # 10) Do the same as step 9, but use string interpolation.
+"Hola #{nombre}  #{apellido}"
 
 # 11) Create a method that takes two strings as arguments (first, last) and and returns a string in the format:
 # "Hello, Jon Snow, how are you today?" when first is "Jon" and last is "Snow"
+def got(first,last)
+  "Hello #{first}  #{last}, how are you today?"
+end
+got(Jon,Snow)
 
 # 12) Create a method that takes two strings as arguments (first, last) and and prints a string in the format:
 # "Hello, Jon Snow, how are you today?" when first is "Jon" and last is "Snow"
-
+def got(first,last)
+  print "Hello #{first}  #{last}, how are you today?"
+end
+got(Jon,Snow)
 # 13) Store the length of string "pneumonoultramicroscopicsilicovolcanoconiosis" in a new variable
+wtf = "pneumonoultramicroscopicsilicovolcanoconiosis".size
 
 # 14) Given any string, find a way to print the string 5 times (by using a single command)
 # For example, my_str = " a "
 # Expected: " a  a  a  a  a "
-
+mi_amor = "Nathan"
+print mi_amor*5
 # 15) Create a method that takes two numbers as parameters and returns their sum
+def haz_suma(a,b)
+a + b
+end
 
 # 16) Create a method that takes two numbers as parameters and returns the difference
+def diferencia(a,b)
+(a - b).abs
+end
 
 # 17) Create a method that takes two numbers as parameters and returns the result of dividing the first parameter by the second parameter
+def division(a,b)
+a / b
+end
 
 # 18) Create a method that takes two numbers as parameters and returns the result of multiplying them
+def multiplicacion(a,b)
+a * b
+end
 
 # 19) Create a method that takes two numbers as parameters and returns the remainder after dividing the first by the second
+def remainder(a,b)
+a % b
+end
 
 # 20) Create a method that takes 1 parameter and prints the type of the parameter (e.g. for "hi" it would print "String")
+def what_is_it(a)
+  a.class
+  print a
+end
+
 
 # 21) Create a method that takes 2 numbers as parameters (base & height) and calculates the area of a triangle
-
+def triangle(base,height)
+  (base * height) / 2
+end
+triangle
 # 22) Create a method that takes 2 numbers as parameters (base & height) and calculates the area of a triangle, but this time use the methods created in 17 & 18 to calculate your result
+def multiplicacion(a,b)
 
 # 23) Create a hash to map a person's name to their age (e.g. "Jon" maps to 23, "Mary" maps to 25, etc). Create at least 5 entries
-
+names = { "John" => 23, "Mary" => 25, "Nathan" => 25, "Dany" => 25, "Erika" => 32 }
 # 24) Iterate over all elements of the hash from 23 and print the a line in the following format for each key-value pair:
 # "Key:Mary, Value:25"
+names.each do |key,value|
+  print "Key :#{key}, Value :#{value} "
 
 # 25) Get all keys from the hash created in 24 and store them in a variable (by using a single command)
+new_names = names.keys
 
 # 26) Get all values from the hash created in 24 and store them in a variable (by using a single command)
+new_names_2 = names.values
 
 # 27) Create an array and add 5 strings. The strings can be whatever you want
+historias = ["Hola", "mi" "nombre", "es" "lo que quieras"]
 
 # 28) Iterate over the array created in 27 and print each string
+historias.each do |string|
+  puts string
+
 
 # 29) Iterate over the array created in 27 and print each string. Use a while loop to do the iteration
 
 # 30) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a string, false otherwise
+def liar(fact)
+if fact == ""
+  return true
+else
+  return false
+end
+
 
 # 31) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a number, false otherwise
+def cypher(number)
+  if number == Float(number) != nil rescue false
+end
 
 # 32) Create a method that takes 1 boolean parameter called 'hungry' and prints "Not hungry" when the argument is false, and prints "Very hungry" when the argument is true. Use the ternary operator.
+def hungry_or_not(hungry)
+if hungry
+end
 
 # 33) Usa a while loop to print "Are we there yet?!!" 10 times
+def toddler(n)
+ n = 0
+ while n <= 10
+ puts n
+ n += 1
+end
+end
+
 
 # 34) Create a method that takes a number as a parameter and uses a while loop to print "Are we there yet?!!" n times, where n is the number of times the statement will be printed. For example, when n = 5, it will print "Are we there yet?!!" five times.
+def toddler_2(n)
+
+end
 
 # 35) Create a method that takes two numbers as parameters and calculates the area of a rectangle
 
@@ -81,6 +157,11 @@
 
 # 37) Given any string, use the ternary operator to print "Yes" or "No" whenever the string contains the letter 'a'
 # For example, your statement should print "Yes" for "Hola" and "No" for "Hi"
+def letter_a(x)
+  x = ""
+  if x.include?'a' ? yes : no
+  end
+
 
 # 38) Create class Dog. All dogs have a 'name' property and a 'bark()' method. Whenever a dog barks, it should print its name. For example, a dog named "Fluffy" would print "Woof, Fluffy, Woof!"
 
@@ -91,9 +172,9 @@
 # 41) Create a hash that maps a dog owner (String) to a dog (Dog). Add 3 owner-to-Dog mappings
 
 # 42) Iterate over your hash (created in 41) and print a sentence in the following format for each key-value pair:
-# "The dog owner is Jon and Fluffy says: Woof, Fluffy, Woof!" 
+# "The dog owner is Jon and Fluffy says: Woof, Fluffy, Woof!"
 
-# 43) Create a hash that maps a food item to a price (maps a String to a Float ). For example, a "beer" would map to 4.5 
+# 43) Create a hash that maps a food item to a price (maps a String to a Float ). For example, a "beer" would map to 4.5
 # Add 5 entries to your hash
 
 # 44) Iterate over all entries in your map created in 43 and calculate the sum of all prices.
