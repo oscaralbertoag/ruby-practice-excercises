@@ -61,7 +61,7 @@ end
 
 # 16) Create a method that takes two numbers as parameters and returns the difference
 def diferencia(a,b)
-(a - b).abs
+a - b
 end
 
 # 17) Create a method that takes two numbers as parameters and returns the result of dividing the first parameter by the second parameter
@@ -129,19 +129,13 @@ end
 
 # 30) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a string, false otherwise
 def liar(fact)
-if fact == fact.to_s
-  return true
-else
-  return false
+fact.is_a? String
 end
 
 
 # 31) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a number, false otherwise
 def cypher(number)
-  if number == number.to_i
-    puts true
-  else
-    puts false
+ number.is_a? Numeric
 end
 
 # 32) Create a method that takes 1 boolean parameter called 'hungry' and prints "Not hungry" when the argument is false, and prints "Very hungry" when the argument is true. Use the ternary operator.
@@ -191,55 +185,71 @@ end
 # 37) Given any string, use the ternary operator to print "Yes" or "No" whenever the string contains the letter 'a'
 # For example, your statement should print "Yes" for "Hola" and "No" for "Hi"
 def letter_a(phrase)
-  phrase.downcase['a'] ? "yes" : "no"
+  phrase.downcase['a'] ? "Yes" : "No"
 end
 
 
 # 38) Create class Dog. All dogs have a 'name' property and a 'bark()' method. Whenever a dog barks, it should print its name. For example, a dog named "Fluffy" would print "Woof, Fluffy, Woof!"
 
 class Dog
+  attr_reader :name
   def initialize(name)
-  @name = name
+    @name = name
   end
-    def bark
-    puts "Woof, #{@name}, Woof!"
-    end
+  def bark
+     "Woof, #{@name}, Woof!"
+  end
 end
 simba = Dog.new("Simbita")
- ==>Woof, Simbita, Woof!
- chicharito = Dog.new("Chicharito")
- molly = Dog.new("Molly")
+chicharito = Dog.new("Chicharito")
+molly = Dog.new("Molly")
 puffy = Dog.new("Puffy")
- nikki = Dog.new("Nikki")
+nikki = Dog.new("Nikki")
 
 
 # 39) Create a list of 5 Dogs (use the class in 38 to create your dog instances).
-dogs = ["Simbita", "Chicharito", "Molly", "Puffy", "Nikki"]
+dogs = [simbita, chicharito, molly, puffy, nikki]
 
 # 40) Iterate over the list of dogs created in 39 and make each dog bark
 dogs each do |dog|
 dog.bark
+end
 
 # 41) Create a hash that maps a dog owner (String) to a dog (Dog). Add 3 owner-to-Dog mappings
-dog_owners = []
+doggies = {"mimi"=> simba, "ozzie"=> chicharito, "dany" => puffy}
 
 # 42) Iterate over your hash (created in 41) and print a sentence in the following format for each key-value pair:
 # "The dog owner is Jon and Fluffy says: Woof, Fluffy, Woof!"
+doggies.each do |key,value|
+  puts "The dog owner is #{key} and #{value.name} says: #{value.bark}"
+end
 
 # 43) Create a hash that maps a food item to a price (maps a String to a Float ). For example, a "beer" would map to 4.5
 # Add 5 entries to your hash
-
+central_perk = { "beer" => 20.to_f, "wine" => 10.to_f, "cocktail" => 5.to_f, "cheese" => 10.to_f, "nuts" => 20.to_f}
 
 # 44) Iterate over all entries in your map created in 43 and calculate the sum of all prices.
+cost = 0
+central_perk.each do |item,price|
+  cost+=price
+end
 
 # 45) Calculate the sum of all prices in the hash with a single command (hint: exercise 26)
+central_perk.values.sum
 
 # 46) Calculate the average price for all prices in the hash with a single command (hint: exercise 26)
+central_perk.values.sum / central_perk.size
 
 # 47) Create a method that receives 3 parameters (a, b, & c, which are all integers) , performs a calculation using the following formula, and returns the result:
 # ((a - b) + (a - c)) / (2 * c)
+def calculate(a,b,c)
+  ((a - b) + (a - c)) / (2 * c)
+end
 
 # 48) Create another method that does exactly the same logic as the one in 47, but ONLY use the methods you created in exercises 15, 16, 17, & 18 to perform the mathematical operations
+def calculate_2(a,b,c)
+ division(haz_suma(diferencia(a,b) ,diferencia(a,c)), multiplicacion(2,c))
+end
 
 # 49) Create a method that asks the user for a favorite color ("What's your favorite color?"), and only stops until the user answers "green"
 def green
@@ -247,9 +257,14 @@ def green
   answer = gets.chomp
   while answer != "green"
     puts "What is your favorite color"
+    answer = gets.chomp
   end
-
+end
 
 # 50) Create a method that takes 1 parameter called 'total' (float) , calculates a 20% tip, and returns it.
+def tip(total)
+ total * 0.20
+end
+
 
 
