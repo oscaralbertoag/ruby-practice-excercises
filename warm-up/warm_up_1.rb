@@ -121,6 +121,7 @@ beyonce_songs.each do |title|
 end
 
 # 29) Iterate over the array created in 27 and print each string. Use a while loop to do the iteration
+# FIX ME
 index = 0
 while index <= beyonce_songs.size
   print beyonce_songs[index]
@@ -128,15 +129,18 @@ while index <= beyonce_songs.size
 end
 
 # 30) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a string, false otherwise
+# USE TERNARY
 def s_or_not(phrase)
   if phrase.class == String; true else false end
 end
 
 # 31) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a number, false otherwise
+# USE TERNARY
 def i_or_not(n)
   if n.class == Integer; true else false end
 end
 # 32) Create a method that takes 1 boolean parameter called 'hungry' and prints "Not hungry" when the argument is false, and prints "Very hungry" when the argument is true. Use the ternary operator.
+# REQUIREMENTS NOT FULLY MET
 def joey(hungry)
   hungry == true ? "Very hungry" : "Not hungry"
 end
@@ -164,6 +168,7 @@ def rectangle(a, b)
   c = a * b
 end
 # 36) Create a method that takes two numbers as parameters and calculates the area of a rectangle, but this time use the method you created in 18 to perform the calculation
+# CORRECT, BUT READ INSTRUCTIONS CAREFULLY
 def area(a, b)
   rectangle(a, b)
 end
@@ -202,6 +207,7 @@ happiness = { 'Mimi' => scooby, 'Ozzie' => rex, 'Dany' => azz }
 
 # 42) Iterate over your hash (created in 41) and print a sentence in the following format for each key-value pair:
 # "The dog owner is Jon and Fluffy says: Woof, Fluffy, Woof!"
+# REQUIREMENTS NOT FULLY MET
 happiness.each do |owner, dog|
   print "The dog onwer is #{owner} and #{dog.bark}"
 end
@@ -211,6 +217,7 @@ end
 bar = { 'mojito' => 10, 'vin' => 4, 'beer' => 5, 'cider' => 5, 'margarita' => 6 }
 
 # 44) Iterate over all entries in your map created in 43 and calculate the sum of all prices.
+# FIX ME
 bar.each do |value|
   puts bar.values.sum
 end
