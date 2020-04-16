@@ -129,20 +129,20 @@ while index <= beyonce_songs.size
 end
 
 # 30) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a string, false otherwise
-# USE TERNARY
+# USE TERNARY CORRECTED
 def s_or_not(phrase)
-  if phrase.class == String; true else false end
+  phrase.class == String ? true : false
 end
 
 # 31) Create a method that takes 1 parameter and returns a boolean value. It will return true if the parameter is a number, false otherwise
-# USE TERNARY
+# USE TERNARY CORRECTED
 def i_or_not(n)
-  if n.class == Integer; true else false end
+  n.class == Integer ? true : false
 end
 # 32) Create a method that takes 1 boolean parameter called 'hungry' and prints "Not hungry" when the argument is false, and prints "Very hungry" when the argument is true. Use the ternary operator.
-# REQUIREMENTS NOT FULLY MET
+# REQUIREMENTS NOT FULLY MET - CORRECTED
 def joey(hungry)
-  hungry == true ? "Very hungry" : "Not hungry"
+  hungry == true ? (print "Very hungry") : (print "Not hungry")
 end
 
 # 33) Usa a while loop to print "Are we there yet?!!" 10 times
@@ -168,9 +168,9 @@ def rectangle(a, b)
   c = a * b
 end
 # 36) Create a method that takes two numbers as parameters and calculates the area of a rectangle, but this time use the method you created in 18 to perform the calculation
-# CORRECT, BUT READ INSTRUCTIONS CAREFULLY
+# CORRECT, BUT READ INSTRUCTIONS CAREFULLY - CORRECTED(USED METHOD IN 18)
 def area(a, b)
-  rectangle(a, b)
+  multiplicacion(a, b)
 end
 
 # 37) Given any string, use the ternary operator to print "Yes" or "No" whenever the string contains the letter 'a'
@@ -181,6 +181,7 @@ end
 
 # 38) Create class Dog. All dogs have a 'name' property and a 'bark()' method. Whenever a dog barks, it should print its name. For example, a dog named "Fluffy" would print "Woof, Fluffy, Woof!"
 class Dog
+  attr_accessor :name
   def initialize(name)
     @name = name
   end
@@ -209,7 +210,7 @@ happiness = { 'Mimi' => scooby, 'Ozzie' => rex, 'Dany' => azz }
 # "The dog owner is Jon and Fluffy says: Woof, Fluffy, Woof!"
 # REQUIREMENTS NOT FULLY MET
 happiness.each do |owner, dog|
-  print "The dog onwer is #{owner} and #{dog.bark}"
+  puts "The dog onwer is #{owner} and #{dog.bark}"
 end
 
 # 43) Create a hash that maps a food item to a price (maps a String to a Float ). For example, a "beer" would map to 4.5
@@ -218,9 +219,8 @@ bar = { 'mojito' => 10, 'vin' => 4, 'beer' => 5, 'cider' => 5, 'margarita' => 6 
 
 # 44) Iterate over all entries in your map created in 43 and calculate the sum of all prices.
 # FIX ME
-bar.each do |value|
-  puts bar.values.sum
-end
+  bar.each do |value|
+  puts value.sum
 
 # 45) Calculate the sum of all prices in the hash with a single command (hint: exercise 26)
 bar.values.sum
