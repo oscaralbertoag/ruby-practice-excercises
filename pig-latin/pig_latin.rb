@@ -1,9 +1,11 @@
-def spanish_pig_latin(sentence)
-    vowels = ["a", "á", "e", "é", "i", "í", "o", "ó", "u", "ú"]
-    result = ""
+def pig_latin(sentence)
+  vowels = ['a', 'e', 'i', 'o', 'u']
+  result = ''
 
-    sentence.each_char { |c| 
-        result += c + (vowels.include?(c.downcase) ? "f" + c : "")
-    }
-    result
+  sentence.each_char do |char|
+    result += char
+    result += (vowels.include? char.downcase) ? 'f' + char : ''
+  end
+  result
 end
+
