@@ -1,3 +1,6 @@
 def remove_negatives(numbers)
-  #   #Your code goes here
+  numbers.each do |n|
+    numbers.delete_if { |n| n.negative? }
+  end
+  numbers
 end
