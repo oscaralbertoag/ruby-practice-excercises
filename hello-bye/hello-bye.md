@@ -15,3 +15,9 @@ say_hello_bye("jose", 0) ➞ "Bye Jose"
 ## Notes
 
 * The name you return must be capitalized.
+
+## Run Tests
+To ensure all use cases are covered, run:
+```bash
+ruby spec/hello_bye_spec.rb -f d
+```
