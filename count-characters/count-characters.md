@@ -14,3 +14,9 @@ count_occurrences("b", "big fat bubble") ➞ 4
 ## Notes
 
 * Your output must be case-sensitive (see second example).
+
+## Run tests
+To ensure all use cases are covered, run:
+```bash
+ruby spec/count_characters_spec.rb -f d
+```

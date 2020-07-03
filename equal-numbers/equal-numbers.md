@@ -17,3 +17,9 @@ numbers_are_equal(1.5, "1.5") ➞ true
 ## Notes
 
 * Don't forget to return the result.
+
+## Run the tests
+To ensure all use cases are covered, run:
+```bash
+ruby spec/equal_numbers_spec -f d
+```
