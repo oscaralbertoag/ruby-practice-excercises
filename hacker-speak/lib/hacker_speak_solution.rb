@@ -10,24 +10,3 @@ def hacker_speak(word)
   end
   new_word.join
 end
-
-
-# def hacker_speak(word)
-#   new_word = []
-#   word.each_char do |char|
-#     if char == 'a'
-#       new_word << 4
-#     elsif char == 'o'
-#       new_word << 0
-#     elsif char == 's'
-#       new_word << 5
-#     elsif char == 'e'
-#       new_word << 3
-#     elsif char == 'i'
-#     new_word << 1
-#     else
-#     new_word << char
-#     end
-#   end
-#   new_word.join
-# end
