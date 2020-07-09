@@ -1,3 +1,7 @@
 def count_true(boolean_list)
-  # Your code goes here
+  counter = 0
+  boolean_list.each do |value|
+    counter += 1 if value == true
+  end
+  counter
 end
