@@ -1,0 +1,7 @@
+
+
+## Run the Tests
+To ensure that all use cases are covered, run:
+```bash
+ruby spec/#{spec_filename} -f d
+```

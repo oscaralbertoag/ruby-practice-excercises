@@ -1,0 +1,7 @@
+require 'rspec/autorun'
+require_relative '../lib/#{lib_filename}'
+
+describe '#{function_name}()' do
+   test_cases = []
+
+end
