@@ -1,3 +1,3 @@
 def unique_sort(numbers)
-  # Your code here
+  numbers.uniq.sort
 end
