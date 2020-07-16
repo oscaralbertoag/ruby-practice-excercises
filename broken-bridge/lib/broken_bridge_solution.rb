@@ -1,3 +1,3 @@
 def is_safe_bridge(bridge_characters)
-  # Your code here
+  bridge_characters.include?(' ') ? false : true
 end
